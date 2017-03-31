@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		li{
+			border: 1px solid blue;
+			width: 100px;
+			height: 30px;
+			list-style: none;
+			text-decoration: none;
+			float: left;
+			text-align: center;
+			cursor:pointer;
+
+		}
+	</style>
+</head>
+<body>
+	<img class="pic" src="images/猫猫.jpg" alt="">
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script src="jquery.js"></script>
+	<script>
+		$('li').click(function(){
+			var ind= $(this).index();
+			var picsrc= [
+			'images/猫猫.jpg',
+			'images/狗狗.jpg',
+			'images/帅.jpg',
+			'images/兔子.jpg',
+			'images/菊花.jpg',			
+			]
+			var mysrc=picsrc[ind];
+			$('.pic').attr('src',mysrc)
+		})
+	</script>
+</body>
+</html>
